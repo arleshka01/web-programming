@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .menu a{ 
+    text-decoration: none;
+    border: 1px solid red;
+    background: green;
+    color: #fff;
+    width: 50px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 25px;
+    
+}
+  .menu a:nth-child(1){
+    padding-right: 15px;
+    padding-left: 15px;
+}    
+  .menu a:nth-child(2){
+    padding-right: 14px;
+    padding-left: 14px;    
+
+}
+  .menu a:nth-child(3){
+    padding-right: 9px;
+    padding-left: 9px;    
+
+}
+/* Write your code here */
+</style>
+</head>
+<body>
+<div class="menu">
+  <a href="home.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contacts.html">Contacts</a>
+</div>
+</body>
+</html>
