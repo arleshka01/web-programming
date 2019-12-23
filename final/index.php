@@ -24,7 +24,7 @@
 			<a href="" class="header_menu">
 				Help
 			</a>
-			<a href="about_us.html" class="header_menu">
+			<a href="about_us.php" class="header_menu">
 				About Us
 			</a>
 
@@ -53,19 +53,12 @@
 		</div>
 	</section>
 
-	<section class="slider_section">
-		<div class="slider" id="main-slider"><!-- outermost container element -->
-			<div class="slider-wrapper"><!-- innermost wrapper element -->
-				<img src="clasical_pants_banner1.jpeg" alt="Fourth" class="slide" />
-				<img src="banner1.jpg" alt="Fourth" class="slide" />
+			<div id ="image">
+				<img id="mainImg">
 			</div>
-		</div>	
+			
 
 
-
-
-
-	</section>
 
 	<div class="medium">
 		<div id="main_menu">	
@@ -159,7 +152,7 @@
             <h6>Categories</h6>
             <ul class="footer_links">
               <li><a href="#">Jeans</a></li>
-              <li><a href="categoty.html">Sport</a></li>
+              <li><a href="categoty.php">Sport</a></li>
               <li><a href="#">Casual</a></li>
               <li><a href="#">Classical</a></li>
               <li><a href="#">Jogger</a></li>
@@ -170,7 +163,7 @@
           <div class="footer_link">
             <h6>Quick Links</h6>
             <ul class="footer_links">
-              <li><a href="about_us.html">About Us</a></li>
+              <li><a href="about_us.php">About Us</a></li>
               <li><a href="#">Contact Us</a></li>
               <li><a href="#">Our Address</a></li>
               <li><a href="#">Privacy Policy</a></li>
@@ -189,10 +182,24 @@
             </p>
           </div>
 </footer>
+<script type="text/javascript">
+	document.getElementById('shopping_cart').style.border = '1px solid black';
+	fetch('http://localhost:8080/registration/image.json')
+.then(response => response.json())
+.then(data => {
+    var divImage = document.getElementById('image');
+    divImage.innerHTML = data.image;
+    var mainImg = document.getElementById('mainImg');
+    
 
+
+})
+.catch(error => console.error(error))
+
+
+</script>
 </body>
 </html>
-
 
 
 
